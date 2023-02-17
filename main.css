@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+    --very-light-gray: hsl(0, 0%, 95%); /* background, headings, buttons */
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+.btn {
+    padding: 0.70em 1.7em;
+    background-color: var(--very-light-gray);
+    border: 2px solid var(--very-light-gray);
+    border-radius: 25px;
+    font-size: 0.9em;
+    color: black;
+    mix-blend-mode: lighten;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--very-light-gray);
+}
+
+.content{
+    display: grid;
+    grid-auto-flow: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: max-content;
+    padding: 3em; 
+    color: var(--transparent-white);
+}
+
+.card__header {
+    margin-block: 2rem;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: var(--very-light-gray);
+}
+
+.card__description {
+    width: 23ch;
+    margin-block-end: 5rem;
+    font-size: 0.9em;
+    line-height: 1.7em;
+}
+
+.card > button {
+    margin-top: auto;
+}
+
+#sedan {
+    background-color: var(--bright-orange);
+}
+
+#suv {
+    background-color: var(--dark-cyan);
+}
+
+#lux {
+    background-color: var(--very-dark-cyan);
+}
+
+.attribution { 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-size: 11px; 
+    text-align: center;
+    /* visibility: collapse */
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        font-size: 1em;
+    }
+
+    .wrapper {
+        display: block;
+        padding: 5em 1.5em;
+        overflow-x: scroll;
+    }
+
+    .content {
+        grid-auto-flow: row;
+    }
+
+    .card {
+        width: auto;
+    }
+
+    .card__description {
+        width: 25ch;
+        margin-block-end: 2rem;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    body {
+        font-size: 0.6em;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    body {
+        font-size: 0.8em;
+    }
+}
